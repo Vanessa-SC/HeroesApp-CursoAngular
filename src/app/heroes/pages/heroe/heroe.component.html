@@ -1,5 +1,3 @@
-<p>heroe works!</p>
-
 <mat-grid-list cols="1" *ngIf="!heroe;else divHeroe">
     <mat-grid-tile>
         <mat-spinner></mat-spinner>
@@ -10,19 +8,26 @@
 
     <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
 
-        <div fxFlex="50">
-            {{ heroe.superhero }} <small>- {{heroe.alter_ego}}</small>
+        <div fxFlex="30">
+            <h2>{{ heroe.superhero }} <small>- {{heroe.alter_ego}}</small></h2>
             <mat-divider></mat-divider>
             <br>
             <img [src]="heroe | imagen" style="width: 100%;">
         </div>
-        <div fxFlex="50">
+        <div fxFlex="70">
             <h1>{{heroe.publisher}}</h1>
             <mat-divider></mat-divider><br>
-            <mat-list>
-                <mat-list-item> {{heroe.first_appearance}} </mat-list-item>
-                <mat-list-item> {{heroe.characters}} </mat-list-item>
-            </mat-list>
+            <mat-card>
+                <mat-list>
+                    <mat-list-item>
+                       Primer aparición: {{heroe.first_appearance}}
+                    </mat-list-item>
+                    <mat-list-item>
+                        Personajes: {{heroe.characters}}
+                    </mat-list-item>
+                </mat-list>
+            </mat-card>
+
             <br>
             <button mat-stroked-button color="warn" (click)="regresar()">Regresar</button>
         </div>
