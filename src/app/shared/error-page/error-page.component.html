@@ -1,25 +1,74 @@
-<h1>404 PAGE NOT FOUND</h1>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Yanone+Kaffeesatz&display=swap');
 
-<ul>
-    <li>
-        <a routerLink="/auth/login">Ir a Login</a>
-    </li>
-    <li>
-        <a routerLink="/auth/registro">Ir al Registro</a>
-    </li>
-    <li>
-        <a routerLink="/heroes/listado">Ir a Listado</a>
-    </li>
-    <li>
-        <a routerLink="/heroes/agregar">Ir a Agregar</a>
-    <li>
-        <a routerLink="/heroes/editar/id">Ir a Editar</a>
-    </li>
-    <li>
-        <a routerLink="/heroes/buscar">Ir a buscar</a>
-    </li>
-    <li>
-        <a routerLink="/heroes/QWER">Ir a :id</a>
-    </li>
-    
-</ul>
+    .not-found {
+        background: #000;
+        color: white;
+        height: 100%;
+        display: flex;
+    }
+
+    .message404 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .err404 {
+        font-family: 'Akaya Telivigala', cursive;
+        font-size: 3rem;
+        margin: auto;
+    }
+
+    .err404link {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5rem;
+
+        list-style: none;
+    }
+
+    a, a:visited {
+        text-decoration: none;  
+        color: white;
+    }
+    a:hover{
+        color: yellowgreen;
+    }
+
+    /* li{
+        padding: 0 5px;
+    } */
+</style>
+
+
+<div class="not-found">
+    <div class="err404">
+        <h1>404
+            <span class="message404">Page not found</span>
+        </h1>
+        <br>
+        <hr>
+        <ul class="err404link">
+            <li>
+                <a routerLink="/auth/login">Ir a Login</a>
+            </li>
+            <li>
+                <a routerLink="/auth/registro">Ir al Registro</a>
+            </li>
+            <li>
+                <a routerLink="/heroes/listado">Ir a Listado</a>
+            </li>
+            <li>
+                <a routerLink="/heroes/agregar">Ir a Agregar</a>
+            <li>
+                <a routerLink="/heroes/editar/id">Ir a Editar</a>
+            </li>
+            <li>
+                <a routerLink="/heroes/buscar">Ir a buscar</a>
+            </li>
+            <li>
+                <a routerLink="/heroes/QWER">Ir a :id</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
