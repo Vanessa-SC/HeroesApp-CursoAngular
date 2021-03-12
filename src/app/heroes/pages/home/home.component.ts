@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../auth/services/auth.service';
+import { Auth } from '../../../auth/interfaces/auth.interface';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +14,22 @@ import { Component, OnInit } from '@angular/core';
     `
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  get auth():Auth{
+    return this.authServ.auth;
+  }
 
-  ngOnInit(): void {
+
+  constructor(
+    private _router: Router,
+    private authServ: AuthService
+  ) { }
+
+  logout(){
+    this.authServ.logout();
+    this._router.navigate(['./auth']);
+
   }
 
 }
